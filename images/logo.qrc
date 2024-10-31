@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="cct">
-    <file>dragon_no_fondo.png</file>
+    <file>logodragon.png</file>
+    <file>images\logodragon.png</file>
   </qresource>
 </RCC>
