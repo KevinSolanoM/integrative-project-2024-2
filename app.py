@@ -2,6 +2,8 @@ import PyQt5.QtWidgets as pyqt
 from PyQt5 import uic
 import sys
 from PyQt5.QtGui import QPixmap
+from connect2bt import conectar
+
 
 from calculator_ang import receptionDate
 
@@ -9,6 +11,7 @@ class Principal(pyqt.QMainWindow):
     def __init__(self):
         super().__init__()
         self.initGUI()
+        conectar()
     
     def initGUI(self):
         uic.loadUi('canon_interfaz.ui',self)

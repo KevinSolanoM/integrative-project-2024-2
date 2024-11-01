@@ -1,10 +1,36 @@
+from connect2bt import envio2esp
 
 
 def receptionDate(base:int,valor2:int,mode:str):
     if mode=='disp':
-        print('Disparar!!!!')
-    elif mode=='rec':
-        print('recargando')
-    else:
-        print(base,valor2,mode)
+        sendVal('7',000,00)
 
+    elif mode=='rec':
+        sendVal('1',000,00)
+
+    elif mode=='manual':
+        sendVal('0',base,valor2)
+
+    elif mode=='auto':#---no esta listo para su uso
+        #mode a cambiar, 
+        sendVal('0',base,66)
+    else:
+        print('error:in recptionDate')
+
+
+def sendVal(modo:str,base:int,canon:int):
+    if base<10:
+        baseStr = '00'+str(base) 
+    elif base<=99:
+        baseStr = '0'+str(base)
+    else:
+        baseStr = str(base)
+    
+    if canon<10:
+        canonStr='0'+str(canon)
+    else:
+        canonStr=str(canon)
+
+    inf = modo+baseStr+canonStr
+    print(inf)
+    envio2esp(inf+'\n')

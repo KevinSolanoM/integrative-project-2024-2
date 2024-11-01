@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>canon</class>
+ <widget class="QMainWindow" name="canon">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>650</width>
-    <height>450</height>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
