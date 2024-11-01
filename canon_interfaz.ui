@@ -199,7 +199,7 @@ border-radius: 20px
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QSlider" name="base_angulo">
+    <widget class="QSlider" name="angulo_base">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -210,6 +210,9 @@ border-radius: 20px
      </property>
      <property name="maximum">
       <number>180</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -262,6 +265,9 @@ background-color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="maximum">
       <number>90</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -428,6 +434,9 @@ border-radius: 20px
      <property name="maximum">
       <number>180</number>
      </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -505,7 +514,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <string>0</string>
      </property>
     </widget>
-    <widget class="QSpinBox" name="spinBox">
+    <widget class="QSpinBox" name="distancia_auto">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -622,7 +631,7 @@ border-raidus: 10px;</string>
    </hints>
   </connection>
   <connection>
-   <sender>base_angulo</sender>
+   <sender>angulo_base</sender>
    <signal>valueChanged(int)</signal>
    <receiver>label_5</receiver>
    <slot>setNum(int)</slot>
