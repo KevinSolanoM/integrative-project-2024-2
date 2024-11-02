@@ -18,6 +18,7 @@ def conectar():
 def envio2esp(mensaje):
     try:
         connection.write(mensaje.encode())
+        mess = ('envio correcto')
     except:
         
         mess = ('algo a fallado')

@@ -70,30 +70,23 @@ class Principal(pyqt.QMainWindow):
         self.show()
 
     def setCon(self):
-        print(self.cone)
         self.info.setText(self.cone)
     #metodos de teclado:
 
     def clicteclaUp(self):
         if self.mode == 'manual':
             valor_canon = self.angulo_canon.value()
-            print(valor_canon)
             self.angulo_canon.setValue(valor_canon + 1)
-            print('up')
 
     def clicteclaDown(self):
         if self.mode == 'manual':
             valor_canon = self.angulo_canon.value()
-            print(valor_canon)
             self.angulo_canon.setValue(valor_canon - 1)
-            print('up')
     
     def clicteclaRight(self):
         if  self.mode == 'manual':
             valor_base = self.angulo_base.value()
-            print(valor_base)
             self.angulo_base.setValue(valor_base + 1)
-            print('derecha')
 
         elif self.mode == 'auto':
             valor_base = self.barra_base_auto.value()
@@ -102,9 +95,7 @@ class Principal(pyqt.QMainWindow):
     def clicteclaLeft(self):
         if self.mode == 'manual':
             valor_base = self.angulo_base.value()
-            print(valor_base)
             self.angulo_base.setValue(valor_base - 1)
-            print('left')
 
         elif self.mode == 'auto':
             valor_base = self.barra_base_auto.value()
