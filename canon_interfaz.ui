@@ -374,7 +374,8 @@ background-color: rgb(250, 231, 222);
      <string notr="true">
 
 
-background-color: rgb(23, 28, 47);</string>
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(23, 28, 47), stop:1 rgb(15, 18, 30));
+</string>
     </property>
     <widget class="QLabel" name="image2">
      <property name="geometry">

@@ -48,7 +48,7 @@ class Principal(pyqt.QMainWindow):
         self.image2.setPixmap(pixmap)
         self.image2.setScaledContents(True)
 
-        #atajos de teclado manual
+        #atajos de teclado
         self.shortcut_up = pyqt.QShortcut(QKeySequence(Qt.Key_Up), self)
         self.shortcut_up.activated.connect(self.clicteclaUp)
 
@@ -66,8 +66,20 @@ class Principal(pyqt.QMainWindow):
         
         self.shortcut_down = pyqt.QShortcut(QKeySequence(Qt.Key_Return), self)
         self.shortcut_down.activated.connect(lambda: self.disparar())
+        
+        self.shortcut_down = pyqt.QShortcut(QKeySequence(Qt.Key_Tab), self)
+        self.shortcut_down.activated.connect(lambda: self.chageMode())
 
         self.show()
+
+    
+    def chageMode(self):
+        if self.mode == None:
+            self.manual_menu.click()
+        elif self.mode == 'manual':
+            self.automatic_menu.click()
+        else:
+            self.manual_menu.click()
 
     def setCon(self):
         self.info.setText(self.cone)
