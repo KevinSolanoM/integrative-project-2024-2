@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>650</width>
-    <height>451</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -374,7 +374,8 @@ background-color: rgb(250, 231, 222);
      <string notr="true">
 
 
-background-color: rgb(23, 28, 47);</string>
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(23, 28, 47), stop:1 rgb(15, 18, 30));
+</string>
     </property>
     <widget class="QLabel" name="image2">
      <property name="geometry">
@@ -589,8 +590,88 @@ border-raidus: 10px;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="inicion" native="true">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>0</y>
+      <width>481</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="info">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>150</y>
+       <width>351</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 238, 250);
+font: 700 22pt &quot;Segoe UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>40</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(84, 27, 46);
+color: rgb(0, 0, 0);
+font: 700 13pt &quot;Segoe UI&quot;;
+border-radius: 20px
+</string>
+     </property>
+     <property name="text">
+      <string>CALCULATOR CANON</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>260</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Escoja un modo</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
    <zorder>autoWidget</zorder>
    <zorder>manualWitget</zorder>
+   <zorder>inicion</zorder>
    <zorder>optionsMenu</zorder>
   </widget>
  </widget>
@@ -707,6 +788,38 @@ border-raidus: 10px;</string>
     <hint type="destinationlabel">
      <x>352</x>
      <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manual_menu</sender>
+   <signal>clicked()</signal>
+   <receiver>inicion</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>automatic_menu</sender>
+   <signal>clicked()</signal>
+   <receiver>inicion</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>431</y>
     </hint>
    </hints>
   </connection>
