@@ -3,13 +3,19 @@ from connect2bt import envio2esp
 
 def receptionDate(base:int,valor2:int,mode:str):
     if mode=='disp':
-        sendVal('7',000,00)
+        sendVal('7',0,0)
 
     elif mode=='rec':
-        sendVal('1',000,00)
-
+        sendVal('1',0,0)
+    elif mode=='rec1':
+        if valor2==1:
+            sendVal('1',1,0)
+        elif valor2==2:
+            sendVal('1',2,0)
+    elif mode=='rec_gat':
+        sendVal('6',0,0)
     elif mode=='manual':
-        sendVal('0',base,valor2)
+        sendVal('3',base,valor2)
 
     elif mode=='auto':#---no esta listo para su uso
         #mode a cambiar, 
