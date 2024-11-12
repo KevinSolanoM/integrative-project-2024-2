@@ -667,6 +667,9 @@ border-radius: 20px
      <property name="pageStep">
       <number>1</number>
      </property>
+     <property name="value">
+      <number>90</number>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
