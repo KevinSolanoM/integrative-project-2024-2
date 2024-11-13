@@ -206,11 +206,20 @@ border-radius: 20px
        <height>22</height>
       </rect>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="maximum">
       <number>180</number>
      </property>
      <property name="pageStep">
       <number>1</number>
+     </property>
+     <property name="value">
+      <number>90</number>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -660,6 +669,9 @@ border-radius: 20px
        <width>160</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
      </property>
      <property name="maximum">
       <number>180</number>

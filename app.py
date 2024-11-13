@@ -135,12 +135,12 @@ class Principal(pyqt.QMainWindow):
     def clicteclaUp(self):
         if self.mode == 'manual':
             valor_canon = self.velocidad_canon.value()
-            self.velocidad_canon.setValue(valor_canon + 15)
+            self.velocidad_canon.setValue(valor_canon + 1)
 
     def clicteclaDown(self):
         if self.mode == 'manual':
             valor_canon = self.velocidad_canon.value()
-            self.velocidad_canon.setValue(valor_canon - 15)
+            self.velocidad_canon.setValue(valor_canon - 1)
             
     
     def clicteclaRight(self):

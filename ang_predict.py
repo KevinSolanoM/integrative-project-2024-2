@@ -8,8 +8,7 @@ import matplotlib.pyplot as plt
 
 ##cambiar los datos!!! 
 datos = [
-    (10, 150), (20, 200), (30, 300), (45, 400), (60, 350), #(angulo , distancia)
-    (70, 160), (80, 100), (90, 50)
+    (10,200), (20, 248), (40, 290), (60, 150)
 ]
 
 def prediction(dis: float = None):
